@@ -1,121 +1,341 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Fahim Ahmed (সম্পদ) — Timeless presence.</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fahim Ahmed (সম্পদ)</title>
+
+  <!-- Font Awesome (Official Brand Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg: #0f1112; /* obsidian black */
-      --card: #131516;
-      --muted: #bfb8ad;
-      --text: #ffffff;
-      --gold: #c69c4d;
-      --glass: rgba(255,255,255,0.03);
-      --btn: rgba(255,255,255,0.03);
-      --maxw: 560px;
+    :root {
+      --bg: #0e0f11;        /* obsidian black */
+      --card: #16181c;
+      --text: #f1efe9;      /* off white */
+      --muted: #bdb8a9;
+      --border: rgba(255,255,255,0.08);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.02), transparent), var(--bg);
-      color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      display:flex; align-items:center; justify-content:center; padding:28px;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .wrap{width:100%; max-width:var(--maxw); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:28px; box-shadow:0 12px 50px rgba(2,6,8,0.7); border:1px solid rgba(255,255,255,0.03);}
-    .header{display:flex; flex-direction:column; align-items:center; gap:12px;}
-    .avatar{width:128px; height:128px; border-radius:999px; overflow:hidden; display:flex; align-items:center; justify-content:center;
-            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:3px solid rgba(198,156,77,0.14); box-shadow:0 10px 30px rgba(0,0,0,0.6);}
-    .avatar img{width:100%; height:100%; object-fit:cover; display:block; border-radius:999px;}
-    .name{font-family:'Playfair Display', serif; font-size:20px; letter-spacing:0.2px; font-weight:700; color:var(--text);}
-    .name .bn{font-size:13px; color:var(--muted); margin-left:6px; font-family:Inter, sans-serif}
-    .tag{font-size:13px; color:var(--muted); margin-top:2px}
-    .links{margin-top:20px; display:flex; flex-direction:column; gap:12px; padding:6px}
-    .btn{display:flex; align-items:center; gap:14px; text-decoration:none; padding:12px 16px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.02); transition:transform .12s ease, box-shadow .12s ease;}
-    .btn:hover{transform:translateY(-4px); box-shadow:0 8px 30px rgba(0,0,0,0.6), 0 0 18px rgba(198,156,77,0.06);}
-    .ico{width:46px; height:46px; min-width:46px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:Inter, sans-serif; font-size:14px; color:var(--text); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)); border:1px solid rgba(255,255,255,0.02);}
-    .label{font-weight:700; color:var(--text);}
-    .sub{font-size:12px; color:var(--muted)}
-    /* individual subtle tints for clarity */
-    .ico--ig{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(20,20,20,0.15));}
-    .ico--fb{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(16,23,39,0.18));}
-    .ico--th{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(38,20,10,0.12));}
-    .ico--x{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(8,18,24,0.14));}
-    .ico--wa{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(10,30,18,0.12));}
-    .ico--tg{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(6,22,30,0.12));}
-    .label .gold{color:var(--gold); margin-left:6px; font-family:'Playfair Display', serif; font-weight:600}
-    .footer{margin-top:18px; text-align:center; color:var(--muted); font-size:13px}
-    .signature{font-family:'Playfair Display', serif; color:var(--gold); margin-top:8px; font-size:15px}
-    @media (max-width:520px){.wrap{padding:20px}.avatar{width:110px;height:110px}.name{font-size:18px}}
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1a1c20, var(--bg));
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 380px;
+      padding: 32px 26px;
+      background: linear-gradient(180deg, #15171b, #0e0f11);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.15);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--card);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      transition: all 0.25s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      background: #1c1f25;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .link span {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.6px;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header class="header">
-      <div class="avatar"><img src="profile.png" alt="Fahim Ahmed (সম্পদ)"></div>
-      <div style="text-align:center">
-        <div class="name">Fahim Ahmed <span class="bn">(সম্পদ)</span></div>
-        <div class="tag">Timeless presence.</div>
-      </div>
-    </header>
 
-    <section class="links" aria-label="social links">
-      <a class="btn" href="https://www.instagram.com/fahimahmed.in" target="_blank" rel="noopener noreferrer">
-        <div class="ico ico--ig">IG</div>
-        <div>
-          <div class="label">Instagram <span class="gold">·</span></div>
-          <div class="sub">@fahimahmed.in</div>
-        </div>
+  <div class="card">
+    <div class="avatar">
+      <!-- Replace profile.jpg with your photo -->
+      <img src="profile.jpg" alt="Fahim Ahmed">
+    </div>
+
+    <h1>Fahim Ahmed (সম্পদ)</h1>
+    <div class="subtitle">Timeless Presence</div>
+
+    <div class="links">
+
+      <a class="link" href="https://www.instagram.com/fahimahmed.in" target="_blank">
+        <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+        <span>Instagram</span>
       </a>
 
-      <a class="btn" href="https://www.facebook.com/fahimahmed.net" target="_blank" rel="noopener noreferrer">
-        <div class="ico ico--fb">f</div>
-        <div>
-          <div class="label">Facebook <span class="gold">·</span></div>
-          <div class="sub">facebook.com/fahimahmed.net</div>
-        </div>
+      <a class="link" href="https://www.facebook.com/fahimahmed.net" target="_blank">
+        <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+        <span>Facebook</span>
       </a>
 
-      <a class="btn" href="https://www.threads.com/@fahimahmed.in" target="_blank" rel="noopener noreferrer">
-        <div class="ico ico--th">T</div>
-        <div>
-          <div class="label">Threads <span class="gold">·</span></div>
-          <div class="sub">@fahimahmed.in</div>
-        </div>
+      <a class="link" href="https://x.com/fahimahmed9118" target="_blank">
+        <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
+        <span>X (Twitter)</span>
       </a>
 
-      <a class="btn" href="https://x.com/fahimahmed9118" target="_blank" rel="noopener noreferrer">
-        <div class="ico ico--x">X</div>
-        <div>
-          <div class="label">X <span class="gold">·</span></div>
-          <div class="sub">@fahimahmed9118</div>
-        </div>
+      <a class="link" href="https://www.threads.com/@fahimahmed.in" target="_blank">
+        <div class="icon"><i class="fa-brands fa-threads"></i></div>
+        <span>Threads</span>
       </a>
 
-      <a class="btn" href="https://wa.me/+8801783885240" target="_blank" rel="noopener noreferrer">
-        <div class="ico ico--wa">WA</div>
-        <div>
-          <div class="label">WhatsApp <span class="gold">·</span></div>
-          <div class="sub">+8801783885240</div>
-        </div>
+      <a class="link" href="https://t.me/fahim9118" target="_blank">
+        <div class="icon"><i class="fa-brands fa-telegram"></i></div>
+        <span>Telegram</span>
       </a>
 
-      <a class="btn" href="https://t.me/fahim9118" target="_blank" rel="noopener noreferrer">
-        <div class="ico ico--tg">TG</div>
-        <div>
-          <div class="label">Telegram <span class="gold">·</span></div>
-          <div class="sub">@fahim9118</div>
-        </div>
-      </a>
-    </section>
+    </div>
 
-    <footer class="footer">
-      <div class="signature">Timeless presence.</div>
-      <div class="small" style="margin-top:8px">Obsidian edition — scan the QR to open this page.</div>
+    <footer>
+      © Fahim Ahmed
     </footer>
   </div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fahim Ahmed (সম্পদ)</title>
+
+  <!-- Font Awesome (Official Brand Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e0f11;        /* obsidian black */
+      --card: #16181c;
+      --text: #f1efe9;      /* off white */
+      --muted: #bdb8a9;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1a1c20, var(--bg));
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 380px;
+      padding: 32px 26px;
+      background: linear-gradient(180deg, #15171b, #0e0f11);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.15);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--card);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      transition: all 0.25s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      background: #1c1f25;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .link span {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.6px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="avatar">
+      <!-- Replace profile.jpg with your photo -->
+      <img src="profile.jpg" alt="Fahim Ahmed">
+    </div>
+
+    <h1>Fahim Ahmed (সম্পদ)</h1>
+    <div class="subtitle">Timeless Presence</div>
+
+    <div class="links">
+
+      <a class="link" href="https://www.instagram.com/fahimahmed.in" target="_blank">
+        <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+        <span>Instagram</span>
+      </a>
+
+      <a class="link" href="https://www.facebook.com/fahimahmed.net" target="_blank">
+        <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+        <span>Facebook</span>
+      </a>
+
+      <a class="link" href="https://x.com/fahimahmed9118" target="_blank">
+        <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
+        <span>X (Twitter)</span>
+      </a>
+
+      <a class="link" href="https://www.threads.com/@fahimahmed.in" target="_blank">
+        <div class="icon"><i class="fa-brands fa-threads"></i></div>
+        <span>Threads</span>
+      </a>
+
+      <a class="link" href="https://t.me/fahim9118" target="_blank">
+        <div class="icon"><i class="fa-brands fa-telegram"></i></div>
+        <span>Telegram</span>
+      </a>
+
+    </div>
+
+    <footer>
+      © Fahim Ahmed
+    </footer>
+  </div>
+
 </body>
 </html>
